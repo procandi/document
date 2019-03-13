@@ -1,7 +1,6 @@
 # document
 「病人資料」
-
-BEGIN;
+BEGIN;  
 -- CREATE TABLE "patients" -------------------------------------  
 CREATE TABLE "public"."patients" (  
 	"id" Integer DEFAULT nextval('patients_id_seq'::regclass) NOT NULL,  
