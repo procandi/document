@@ -1,15 +1,16 @@
 # document
-「病人資料」
+「病人資料」  
 BEGIN;  
--- CREATE TABLE "patients" -------------------------------------  
-CREATE TABLE "public"."patients" (  
+-- CREATE TABLE "patient" -------------------------------------  
+CREATE TABLE "public"."patient" (  
 	"id" Integer DEFAULT nextval('patients_id_seq'::regclass) NOT NULL,  
 	"pid" Character Varying,  
 	"pname" Character Varying,  
 	"birthday" Date,  
 	"sex" Character Varying,  
 	"telephone" Character Varying,  
-	"address" Character Varying,  
+	"address" Text,  
+	"flag" Integer,  
 	"created_at" Timestamp Without Time Zone NOT NULL,  
 	"updated_at" Timestamp Without Time Zone NOT NULL,  
 	PRIMARY KEY ( "id" ) );  
@@ -19,10 +20,10 @@ COMMIT;
 
 
 
-「檢查單」
+「檢查單」  
 BEGIN;  
--- CREATE TABLE "examines" -------------------------------------  
-CREATE TABLE "public"."examines" (  
+-- CREATE TABLE "examine" -------------------------------------  
+CREATE TABLE "public"."examine" (  
 	"id" Integer DEFAULT nextval('examines_id_seq'::regclass) NOT NULL,  
 	"seq" Character Varying,  
 	"eseq" Character Varying,  
@@ -47,8 +48,9 @@ CREATE TABLE "public"."examines" (
 	"completetime" Time Without Time Zone,  
 	"enterdate" Date,  
 	"entertime" Time Without Time Zone,  
-	"report" Character Varying,  
-	"pacsno" Character Varying,  
+	"report" Text,  
+	"pacsno" Numeric,  
+	"flag" Integer,  
 	"created_at" Timestamp Without Time Zone NOT NULL,  
 	"updated_at" Timestamp Without Time Zone NOT NULL,  
 	"worksense_id" Integer,  
