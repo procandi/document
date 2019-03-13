@@ -6,6 +6,7 @@ birthday 病人生日 (如2019-01-01)
 sex 病人性別  (如M、F、O)   
 telephone 病人電話  
 address 病人住址  
+flag 交換註記 0 - 初次寫入， 1 - 資料已取走， 2 - 資料有更新  
   
 「檢查單」
 seq 工單號  
@@ -26,7 +27,7 @@ enterdrname 報告醫師姓名
 enterdate 報告日期 (如2019-01-01)    
 entertime 報告時間 (如08:08:08)    
 report 報告內容  
-  
+flag 交換註記 0 - 初次寫入， 1 - 資料已取走， 2 - 資料有更新    
   
   
 「病人資料」  
