@@ -1,24 +1,22 @@
 # document
 「病人資料」
+
 BEGIN;
-
--- CREATE TABLE "patients" -------------------------------------
-
-CREATE TABLE "public"."patients" ( 
-	"id" Integer DEFAULT nextval('patients_id_seq'::regclass) NOT NULL,
-	"pid" Character Varying,
-	"pname" Character Varying,
-	"birthday" Date,
-	"sex" Character Varying,
-	"telephone" Character Varying,
-	"address" Character Varying,
-	"created_at" Timestamp Without Time Zone NOT NULL,
-	"updated_at" Timestamp Without Time Zone NOT NULL,
-	PRIMARY KEY ( "id" ) );
- ;
--- -------------------------------------------------------------
-
-COMMIT;
+-- CREATE TABLE "patients" -------------------------------------  
+CREATE TABLE "public"."patients" (  
+	"id" Integer DEFAULT nextval('patients_id_seq'::regclass) NOT NULL,  
+	"pid" Character Varying,  
+	"pname" Character Varying,  
+	"birthday" Date,  
+	"sex" Character Varying,  
+	"telephone" Character Varying,  
+	"address" Character Varying,  
+	"created_at" Timestamp Without Time Zone NOT NULL,  
+	"updated_at" Timestamp Without Time Zone NOT NULL,  
+	PRIMARY KEY ( "id" ) );  
+ ;  
+-- -------------------------------------------------------------  
+COMMIT;  
 
 
 
