@@ -79,7 +79,7 @@ CREATE TABLE "public"."examine" (
 	"enterdate" Date,  
 	"entertime" Time Without Time Zone,  
 	"report" Text,  
-	"pacsno" Numeric,  
+	"pacsno" Character Varying( 20 ),  
 	"flag" Integer,  
 	"created_at" Timestamp Without Time Zone NOT NULL,  
 	"updated_at" Timestamp Without Time Zone NOT NULL,  
