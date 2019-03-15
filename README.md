@@ -1,5 +1,5 @@
 # document
-「病人資料patient」  
+「patient」病人資料說明   
 id 病人流水號(不用寫)
 pid 病歷號  
 pname 病人姓名  
@@ -9,7 +9,7 @@ telephone 病人電話
 address 病人住址  
 flag 交換註記 0 - 初次寫入， 1 - 資料已取走， 2 - 資料有更新  
   
-「檢查資料examine」
+「examine」檢查資料說明  
 id 檢查流水號(不用寫)
 seq 工單號  
 typeid　檢查類別ID (如GA)  
@@ -53,11 +53,11 @@ COMMIT;
 
 
 
-「檢查單」  
+「檢查資料」  
 BEGIN;  
 -- CREATE TABLE "examine" -------------------------------------  
 CREATE TABLE "public"."examine" (  
-	"id" Integer DEFAULT nextval('examines_id_seq'::regclass) NOT NULL,  檢查流水號(關聯鍵值)
+	"id" Integer DEFAULT nextval('examines_id_seq'::regclass) NOT NULL,  檢查流水號(關聯鍵值)  
 	"seq" Character Varying( 20 ), 工單號  
 	"eseq" Character Varying( 20 ), 工單號二  
 	"typeid" Character Varying( 10 ), 檢查類別ID  
