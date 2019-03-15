@@ -102,6 +102,8 @@ patient_id 病人流水號(對應patient.id)
 2-2.資料已存在，update病人資料(examine)，改flag為2  
   
 3.select病人資料(patient)取得id流水號  
+
+4.select檢查資料(examine)，檢查資料是否存在，分5-1或5-2的情況  
   
-2-1.資料不存在，insert into檢查資料(examine)，patient_id寫入由3取得的id流水號，寫flag為0  
-2-2.資料已存在，update檢查資料(examine)，改flag為2  
+5-1.資料不存在，insert into檢查資料(examine)，patient_id寫入由3取得的id流水號，寫flag為0  
+5-2.資料已存在，update檢查資料(examine)，改flag為2  
