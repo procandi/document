@@ -1,37 +1,4 @@
 # document
-「patient」病人資料說明   
-id 病人流水號(不用寫)
-pid 病歷號  
-pname 病人姓名  
-birthday 病人生日 (如2019-01-01)   
-sex 病人性別  (如M、F、O)   
-telephone 病人電話  
-address 病人住址  
-flag 交換註記 0 - 初次寫入， 1 - 資料已取走， 2 - 資料有更新  
-  
-「examine」檢查資料說明  
-id 檢查流水號(不用寫)
-seq 工單號  
-typeid　檢查類別ID (如GA)  
-typename 檢查類別中文 (如內視鏡檢查)    
-source 來源 (如門診、急診、住院)  
-orderdr 開單醫師代碼  
-ordername 開單醫師姓名  
-orderdate 開單日期 (如2019-01-01)   
-ordertime 開單時間 (如08:08:08)   
-studydr 檢查醫師代碼  
-studydrname 檢查醫師姓名  
-studydate 檢查日期 (如2019-01-01)   
-studytime 檢查時間 (如08:08:08)   
-enterdr 報告醫師代碼  
-enterdrname 報告醫師姓名  
-enterdate 報告日期 (如2019-01-01)    
-entertime 報告時間 (如08:08:08)    
-report 報告內容  
-flag 交換註記 0 - 初次寫入， 1 - 資料已取走， 2 - 資料有更新   
-patient_id 病人流水號(對應patient.id)
-  
-  
 「病人資料」  
 BEGIN;  
 -- CREATE TABLE "patient" -------------------------------------  
@@ -97,3 +64,49 @@ CREATE TABLE "public"."examine" (
   
 COMMIT;  
 
+
+
+
+「patient」病人資料範例說明   
+id 病人流水號(不用寫)
+pid 病歷號  
+pname 病人姓名  
+birthday 病人生日 (如2019-01-01)   
+sex 病人性別  (如M、F、O)   
+telephone 病人電話  
+address 病人住址  
+flag 交換註記 0 - 初次寫入， 1 - 資料已取走， 2 - 資料有更新  
+  
+「examine」檢查資料範例說明  
+id 檢查流水號(不用寫)
+seq 工單號  
+typeid　檢查類別ID (如GA)  
+typename 檢查類別中文 (如內視鏡檢查)    
+source 來源 (如門診、急診、住院)  
+orderdr 開單醫師代碼  
+ordername 開單醫師姓名  
+orderdate 開單日期 (如2019-01-01)   
+ordertime 開單時間 (如08:08:08)   
+studydr 檢查醫師代碼  
+studydrname 檢查醫師姓名  
+studydate 檢查日期 (如2019-01-01)   
+studytime 檢查時間 (如08:08:08)   
+enterdr 報告醫師代碼  
+enterdrname 報告醫師姓名  
+enterdate 報告日期 (如2019-01-01)    
+entertime 報告時間 (如08:08:08)    
+report 報告內容  
+flag 交換註記 0 - 初次寫入， 1 - 資料已取走， 2 - 資料有更新   
+patient_id 病人流水號(對應patient.id)  
+  
+  
+資料新增情況模擬
+1.select病人資料(patient)，檢查資料是否存在，分2-1或2-2的情況  
+  
+2-1.資料不存在，insert into病人資料(patient)，寫flag為0  
+2-2.資料已存在，update病人資料(examine)，改flag為2  
+  
+3.select病人資料(patient)取得id流水號  
+  
+2-1.資料不存在，insert into檢查資料(examine)，寫flag為0  
+2-2.資料已存在，update檢查資料(examine)，改flag為2  
