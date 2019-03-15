@@ -1,7 +1,6 @@
 # document
 「病人資料」  
 BEGIN;  
--- CREATE TABLE "patient" -------------------------------------  
 CREATE TABLE "public"."patient" (  
 	"id" Integer DEFAULT nextval('patients_id_seq'::regclass) NOT NULL, 病人流水號(關聯鍵值)  
 	"pid" Character Varying( 20 ), 病歷號  
@@ -14,15 +13,13 @@ CREATE TABLE "public"."patient" (
 	"created_at" Timestamp Without Time Zone NOT NULL,  
 	"updated_at" Timestamp Without Time Zone NOT NULL,  
 	PRIMARY KEY ( "id" ) );  
- ;  
--- -------------------------------------------------------------  
+ ;   
 COMMIT;  
 
 
 
 「檢查資料」  
 BEGIN;  
--- CREATE TABLE "examine" -------------------------------------  
 CREATE TABLE "public"."examine" (  
 	"id" Integer DEFAULT nextval('examines_id_seq'::regclass) NOT NULL,  檢查流水號(關聯鍵值)  
 	"seq" Character Varying( 20 ), 工單號  
@@ -60,8 +57,6 @@ CREATE TABLE "public"."examine" (
 	"patient_id" Integer, 病人流水號(關聯鍵值)  
 	PRIMARY KEY ( "id" ) );  
  ;  
--- -------------------------------------------------------------  
-  
 COMMIT;  
 
 
